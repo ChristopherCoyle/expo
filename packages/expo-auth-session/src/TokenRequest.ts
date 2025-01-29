@@ -203,6 +203,8 @@ export class TokenRequest<T extends TokenRequestConfig> extends Request<T, Token
         body: this.getQueryBody(),
       }
     );
+    console.log("SERVER Response:")
+    console.log(response)
 
     if ('error' in response) {
       throw new TokenError(response);
